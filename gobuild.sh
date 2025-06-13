@@ -20,5 +20,5 @@ unset to
 install "${1%*.go}" $to/
 
 [[ $to == '.' ]] ||
-    find . -type f -size +500k -exec rm "{}" \+
+    find . -type f -size +100k ! -iname '*.go' -exec rm "{}" \+
 
