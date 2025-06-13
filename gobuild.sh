@@ -8,6 +8,7 @@ type -t go >/dev/null 2>&1 || {
     exit 2
 }
 
+go fmt $1
 go build -o "${1%*.go}" $1
 
 unset to

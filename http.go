@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	u := "8080"
+	addr := "8080"
 	if len(os.Args) > 1 {
-		u = strings.Join(os.Args[1:2], "")
+		addr = strings.Join(os.Args[1:2], "")
 	}
-	u = "localhost:" + u
-	fmt.Println("@ http://"+u)
-	log.Fatal(http.ListenAndServe(u, http.FileServer(http.Dir("."))))
+	addr = "localhost:" + addr
+	fmt.Println("@ http://" + addr)
+	log.Fatal(http.ListenAndServe(addr, http.FileServer(http.Dir("."))))
 }

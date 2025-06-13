@@ -3,9 +3,9 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net/url"
 	"os"
-	"io"
 	"strings"
 )
 
