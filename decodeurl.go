@@ -1,4 +1,4 @@
-// url.QueryEscape : URL-encode a string arg or pipe (stdin).
+// url.QueryUnescape : URL-decode a string arg or pipe (stdin).
 package main
 
 import (
@@ -23,6 +23,6 @@ func main() {
 		input = string(data)
 	}
 
-	encoded := url.QueryEscape(input)
-	fmt.Println(encoded)
+	bb, _ := url.QueryUnescape(input)
+	fmt.Println(string(bb))
 }

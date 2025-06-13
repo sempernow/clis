@@ -1,5 +1,4 @@
-// http servev files from PWD.
-// $ http
+// http.FileServer : List and serve files of the current working directory.
 package main
 
 import (
@@ -16,6 +15,6 @@ func main() {
 		u = strings.Join(os.Args[1:2], "")
 	}
 	u = "localhost:" + u
-	fmt.Println("@ ", u)
+	fmt.Println("@ http://"+u)
 	log.Fatal(http.ListenAndServe(u, http.FileServer(http.Dir("."))))
 }

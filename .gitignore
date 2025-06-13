@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# Whitelist directories
+!*/
+
+# Whitelist specific files and directories
+!UNLICENSE
+!.gitignore
+!*.*
